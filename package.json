@@ -1,0 +1,14 @@
+{
+  "name": "SpacePromiseBranding",
+  "version": "1.0.0",
+  "description": "Space Promise Branding page server.",
+  "scripts": {
+    "lite": "lite-server –port 10001",
+    "start": "npm run lite"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}

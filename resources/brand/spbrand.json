@@ -5,12 +5,12 @@
             "items": [
                 {
                     "name": "Logo",
-                    "imagePath": "/assets/LogoV1_254x254.png",
+                    "imagePath": "/resources/brand/assets/LogoV1_254x254.png",
                     "templateName": "image-box-template"
                 },
                 {
                     "name": "Logo inverted",
-                    "imagePath": "/assets/LogoV1Negative_254x254.png",
+                    "imagePath": "/resources/brand/assets/LogoV1Negative_254x254.png",
                     "templateName": "image-box-template"
                 }
             ]
