@@ -1,0 +1,103 @@
+// Page design
+@pageFontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@pageFontSize: 16px;
+@spacing: 8px;
+@background: #FFFFFF;
+
+// Section
+@sectionBackground: #F4F4F4;
+@sectionMargin: @spacing*2;
+@sectionBorders: 1px solid #E7E7E7;
+@sectionBorderRadius: 4px 4px 0 0;
+@sectionContentPadding: @spacing*2 @spacing*4;
+@sectionHeaderBackground: #DEDEDE;
+@sectionHeaderPadding: @spacing*3;
+@sectionHeaderBorderRadius: 3px 3px 0 0;
+@sectionHeaderFontSize: 1.2em;
+@sectionHeaderAssetsCountFontSize: 0.9em;
+@sectionHeaderAssetsCountFontColor: #AAA;
+@sectionHeaderAssetsCountMargin: 0.5em;
+
+// Color box
+@boxBackground: white;
+@boxMargin: @spacing;
+@boxPreviewSizeRatio: 0.5625;
+@boxPreviewWidth: 240px;
+@boxPreviewHeight: @boxPreviewWidth * @boxPreviewSizeRatio;
+@boxNamePadding: @spacing*2 @spacing*2;
+@boxNameFontSize: 0.8em;
+@boxSecondaryFontSize: @boxNameFontSize;
+@boxSecondaryPadding: @boxNamePadding;
+@boxSecondaryColor: #888888;
+
+html, body {
+    font-family: @pageFontFamily;
+    font-size: @pageFontSize;
+    background-color: @background;
+}
+
+header {
+    padding: @spacing*2 @spacing*8;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    color: #232323;
+    font-weight: lighter;
+}
+
+#sections-container {
+    padding: @spacing;
+}
+
+.section {
+    background-color: @sectionBackground;
+    margin: @sectionMargin;
+    border: @sectionBorders;
+    border-radius: @sectionBorderRadius;
+
+    .section-header {
+        background-color: @sectionHeaderBackground;
+        padding: @sectionHeaderPadding;
+        font-size: @sectionHeaderFontSize;
+        border-radius: @sectionHeaderBorderRadius;
+
+        .assets-count {
+            margin-left: @sectionHeaderAssetsCountMargin;
+            font-size: @sectionHeaderAssetsCountFontSize;
+            color: @sectionHeaderAssetsCountFontColor;
+        }
+    }
+
+    .section-content {
+        padding: @sectionContentPadding;
+
+        .box {
+            display: inline-block;
+            margin: @boxMargin;
+            background-color: @boxBackground;
+
+            .preview {
+                width: @boxPreviewWidth;
+                height: @boxPreviewHeight;
+
+                .preview-item {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .name {
+                display: inline-block;
+                padding: @boxNamePadding;
+                font-size: @boxNameFontSize;
+            }
+
+            .seconday {
+                float: right;
+                color: @boxSecondaryColor;
+                padding: @boxSecondaryPadding;
+                font-size: @boxSecondaryFontSize;
+            }
+        }
+    }
+}

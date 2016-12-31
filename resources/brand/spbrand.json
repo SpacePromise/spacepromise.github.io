@@ -1,0 +1,67 @@
+{
+    "sections": [
+        {
+            "title": "Logos",
+            "items": [
+                {
+                    "name": "Logo",
+                    "imagePath": "/assets/LogoV1_254x254.png",
+                    "templateName": "image-box-template"
+                },
+                {
+                    "name": "Logo inverted",
+                    "imagePath": "/assets/LogoV1Negative_254x254.png",
+                    "templateName": "image-box-template"
+                }
+            ]
+        },
+        {
+            "title": "Fonts",
+            "items": [
+                {
+                    "name": "Logo",
+                    "secondary": "Segoe UI",
+                    "fontFamily": "Segoe UI",
+                    "fontWeight": "lighter",
+                    "templateName": "font-box-template"
+                },
+                {
+                    "name": "Standard",
+                    "secondary": "Segoe UI",
+                    "fontFamily": "Segoe UI",
+                    "fontWeight": "normal",
+                    "templateName": "font-box-template"
+                }
+            ]
+        },
+        {
+            "title": "Colors",
+            "items": [
+                {
+                    "name": "Primary",
+                    "secondary": "#DCDCDC",
+                    "colorHex": "#DCDCDC",
+                    "templateName": "color-box-template"
+                },
+                {
+                    "name": "Secondary",
+                    "secondary": "#0A0A0A",                    
+                    "colorHex": "#0A0A0A",
+                    "templateName": "color-box-template"
+                },
+                {
+                    "name": "Primary inverted",
+                    "secondary": "#232323",                    
+                    "colorHex": "#232323",
+                    "templateName": "color-box-template"
+                },
+                {
+                    "name": "Secondary inverted",
+                    "secondary": "#FAFAFA",
+                    "colorHex": "#FAFAFA",
+                    "templateName": "color-box-template"
+                }
+            ]
+        }
+    ]
+}

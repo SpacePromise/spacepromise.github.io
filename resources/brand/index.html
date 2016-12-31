@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/reset.min.css" />
+        <link rel='stylesheet/less' type='text/css' href='/branding.less' />
+        <script src="/less.min.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <a href="http://spacepromise.com/">
+                <img src='/assets/LogoV1Negative_254x254.png' width="254" height="254">
+            </a>
+            <h1>BRANDING</h1>
+        </header>
+
+        <div id='sections-container'>
+        </div>
+
+        <script id="sections-template" type='text/x-handlebars-template'>
+            {{#each sections}}
+                {{#if items}}
+                    {{> section-template}}
+                {{/if}}
+            {{/each}}
+        </script>
+
+        <script id="section-template" class='hb-partial' type='text/x-handlebars-template'>
+            <div class='section'>
+                <div class='section-header'>
+                    <span>{{title}}</span>
+                    <span class='assets-count'>{{items.length}} Assets</span>
+                </div>
+                <div class='section-content'>
+                    {{#each items}}
+                        {{> box-template}}
+                    {{/each}}
+                </div>
+            </div>
+        </script>
+
+        <script id="box-template" class='hb-partial' type='text/x-handlebars-template'>
+            <div class='box'>
+                <div class='preview'>
+                    {{> (lookup . 'templateName')}}
+                </div>
+                <div class='name'>{{name}}</div>
+                <div class='seconday'>{{secondary}}</div>
+            </div>
+        </script>
+
+        <script id="image-box-template" class='hb-partial' type='text/x-handlebars-template'>
+            <div class='preview-item' style="text-align: center; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAADmBAMAAAADyPWpAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACnRSTlMNBgMPAAoSFBca3u1srQAAAjZJREFUeF7t3T1vUzEUgGGH6AbGlpLOIcB+UVXo2qrst5TskZACYyUkPv5A25/dqef1cCRXEfcO1XumyLL92PJy5I+bcn0ScRjxdf0YqxLx/ck1t/xcR1xFmyPIZ87Ly8vLy8vLyy83jzFsIjDn8H1WOItOl43m6UDLZcQ5PMPrGxOFf01Pb6PwAOhbQBesyJi8vLy8vLy8vLw8P1dpVsmYkA6ymoWaHekr/BvmWYh0pJUEz+w/sCLoC1bslEbM7n3wX6bh5eXl5eXl5eXlB9qnPIVbpF3ErzA/U3iT9fmC0QPttad79ieikuC32Yp8ZPuVFRmTl5eXl5eXl5eXHxoJJO3vwvwHfxvmD/ib/Pw9gnlWifZx2in8b6RsRT5Rc5ZOdGpeXl5eXl5eXl6+usG5iyCr/AtfSfA7onGATsxLutfJoDCRWjVPG9cHgFbT8PLy8vLy8vLy8mw2dklW2j5Vz+5qXsFn0EtS6kJ0DH/NRBtXRZPC5jKdTcPLy8vLy8vLy8tviCxXXNKeCtfZqfwRhWn+Sar56j6iJBdI06dO7fQ54+fZRdd3u4gReXl5eXl5eXl5+fy1Tr/HXuXiyanmouLzC6RUHWH3t6o5Ji8vLy8vLy8vL99DZRuYwwhH7YuSBjzZ9wWF/233dwk0BS8vLy8vLy8vL59/LCn/rvsMvuofPn0/3zdeJR1nD+BPsk7X8MMea1foaExeXl5eXl5eXl4e8yd89QC+8RdE8HNqdoy54rOaD8X6g0ScxGwtAAAAAElFTkSuQmCC) repeat;">
+                <img src='{{imagePath}}' style="max-height: 100%; max-width: 100%;">
+            </div>
+        </script>
+
+        <script id="color-box-template" class='hb-partial' type='text/x-handlebars-template'>
+            <div class='preview-item' style='background-color: {{colorHex}}'></div>
+        </script>
+
+        <script id='font-box-template' class='hb-partial' type='text/x-handlebars-template'>
+            <div class='preview-item' style='position: relative; font-family: {{fontFamily}}; font-weight: {{fontWeight}}; text-align: center; font-size: 2.5em; color: #232323;'>
+                <span style="position: relative; top: 50%; -ms-transform: translateY(-50%) translateX(-50%); -webkit-transform: translateY(-50%) translateX(-50%); transform: translateY(-50%) translateX(-50%);">Aa&nbsp;Zz</span>
+            </div>
+        </script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+        <script src='/branding.js'></script>
+    </body>
+</html>
