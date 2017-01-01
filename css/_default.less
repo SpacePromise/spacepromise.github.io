@@ -1,0 +1,11 @@
+@import "_variables.less";
+
+html, body {
+    font-family: @pageFontFamily;
+    font-size: @pageFontSize;
+    background-color: @background;
+    & when (@isDark = true) {
+        background-color: @backgroundDark;
+        color: #DCDCDC;
+    }
+}

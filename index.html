@@ -3,73 +3,16 @@
     <head>
         <title>Space Promise</title>
         <link rel="stylesheet" type="text/css" href="/css/reset.min.css">
-        <style>
-        @-webkit-keyframes planet {
-            0%   { -webkit-transform: translateY(-51%) translateX(-50%); }
-            10%  { -webkit-transform: translateY(-51%) translateX(-50%); }
-            100% { -webkit-transform: translateY(-50%) translateX(-50%); }
-        }
-        @keyframes planet {
-            0%   { transform: translateY(-51%) translateX(-50%); }
-            10%  { transform: translateY(-51%) translateX(-50%); }
-            100% { transform: translateY(-50%) translateX(-50%); }
-        }
-        @-webkit-keyframes glow {
-            0%   { opacity: 0; }
-            30%  { opacity: 1; }
-            100% { opacity: 1; }
-        }
-        @keyframes glow {
-            0%   { opacity: 0; }
-            30%  { opacity: 1; }
-            100% { opacity: 1; }
-        }
-        @-webkit-keyframes text {
-            0%   { opacity: 0; }
-            35%  { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes text {
-            0%   { opacity: 0; }
-            35%  { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        html, body {
-            background-color: #0A0A0A;
-            height: 100%;
-            margin: 0;
-            color: #AAA;
-        }
-        .logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translateY(-50%) translateX(-50%);
-            -webkit-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
-        }
-        .glow {
-            opacity: 1;
-            -webkit-animation: glow 8s;
-            animation: glow 8s;
-        }
-        .planet {
-            -ms-transform: translateY(-50%) translateX(-50%);
-            -webkit-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
-            -webkit-animation: planet 8s;
-            animation: planet 8s;
-        }
-        .text {
-            opacity: 1;
-            -webkit-animation: text 8s;
-            animation: text 8s;
-        }
-
-        </style>
+        <link rel='stylesheet/less' type='text/css' href='/landing.less'>
+        <script src="/js/less.min.js" type="text/javascript"></script>
     </head>
     <body>
+        <header>
+            <a href="/resources/development" title="Space Promise Development Page">DEVELOPMENT</a>
+            <a href="/resources/brand" title="Space Promise Brand Page">BRANDING</a>
+            <a href="/resources/legal" title="Space Promise Legal Stuff">LEGAL</a>
+        </header>
+
         <img src='/LogoGlow.png' class='logo glow' width='252' height='306' alt='Space Promise logo'>
         <img src='/LogoText.png' class='logo text' width='252' height='306' alt='Space Promise logo'>
         <img src='/LogoPlanet.png' class='logo planet' width='252' height='306' alt='Space Promise logo'>
