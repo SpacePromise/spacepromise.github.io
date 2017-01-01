@@ -1,25 +1,33 @@
+@isDark: true;
+
 // Page design
 @pageFontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 @pageFontSize: 16px;
 @spacing: 8px;
-@background: #FFFFFF;
+@background: #FAFAFA;
+@backgroundDark: #0A0A0A;
 
 // Section
 @sectionBackground: #F4F4F4;
+@sectionBackgroundDark: #121212;
 @sectionMargin: @spacing*2;
-@sectionBorders: 1px solid #E7E7E7;
+@sectionBorders: 1px solid #E1E1E1;
+@sectionBordersDark: 1px solid #1F1F1F;
 @sectionBorderRadius: 4px 4px 0 0;
 @sectionContentPadding: @spacing*2 @spacing*4;
 @sectionHeaderBackground: #DEDEDE;
+@sectionHeaderBackgroundDark: #0D0D0D;
 @sectionHeaderPadding: @spacing*3;
 @sectionHeaderBorderRadius: 3px 3px 0 0;
 @sectionHeaderFontSize: 1.2em;
 @sectionHeaderAssetsCountFontSize: 0.9em;
-@sectionHeaderAssetsCountFontColor: #AAA;
+@sectionHeaderAssetsCountFontColor: #AAAAAA;
+@sectionHeaderAssetsCountFontColorDark: #767676;
 @sectionHeaderAssetsCountMargin: 0.5em;
 
 // Color box
-@boxBackground: white;
+@boxBackground: @sectionHeaderBackground;
+@boxBackgroundDark: @sectionHeaderBackgroundDark;
 @boxMargin: @spacing;
 @boxPreviewSizeRatio: 0.5625;
 @boxPreviewWidth: 240px;
@@ -34,6 +42,10 @@ html, body {
     font-family: @pageFontFamily;
     font-size: @pageFontSize;
     background-color: @background;
+    & when (@isDark = true) {
+        background-color: @backgroundDark;
+        color: #DCDCDC;
+    }
 }
 
 header {
@@ -41,7 +53,6 @@ header {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.5em;
-    color: #232323;
     font-weight: lighter;
 }
 
@@ -51,12 +62,24 @@ header {
 
 .section {
     background-color: @sectionBackground;
+    & when (@isDark = true) {
+        background-color: @sectionBackgroundDark;
+    }
+
     margin: @sectionMargin;
     border: @sectionBorders;
+    & when (@isDark = true) {
+        border: @sectionBordersDark;
+    }
+
     border-radius: @sectionBorderRadius;
 
     .section-header {
         background-color: @sectionHeaderBackground;
+        & when (@isDark = true) {
+            background-color: @sectionHeaderBackgroundDark;
+        }
+
         padding: @sectionHeaderPadding;
         font-size: @sectionHeaderFontSize;
         border-radius: @sectionHeaderBorderRadius;
@@ -65,6 +88,9 @@ header {
             margin-left: @sectionHeaderAssetsCountMargin;
             font-size: @sectionHeaderAssetsCountFontSize;
             color: @sectionHeaderAssetsCountFontColor;
+            & when (@isDark = true) {
+                color: @sectionHeaderAssetsCountFontColorDark;
+            }
         }
     }
 
@@ -75,6 +101,9 @@ header {
             display: inline-block;
             margin: @boxMargin;
             background-color: @boxBackground;
+            & when (@isDark = true) {
+                background-color: @boxBackgroundDark;
+            }
 
             .preview {
                 width: @boxPreviewWidth;
